@@ -4,7 +4,9 @@
 **From:** Jeff Tirey
 **Date:** 2026-09-03
 
-The new site is live on Vercel. To make kingswaypumpkinfarm.com show it, two DNS records need to change.
+The new site is live on Vercel at **https://kingsway-pumpkin-farm.vercel.app** (repo: https://github.com/jefftirey/kingsway-pumpkin-farm). To make kingswaypumpkinfarm.com show it, two DNS records need to change.
+
+Both `kingswaypumpkinfarm.com` and `www.kingswaypumpkinfarm.com` are already attached to the Vercel project; they just need DNS to point at Vercel.
 
 ## Where the DNS lives today
 
