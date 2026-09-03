@@ -9,10 +9,15 @@
   <meta property="og:description" content="Memories grow on the vine. Family-friendly fall fun since 1990. 2026 season opens September 12.">
   <meta property="og:image" content="https://kingswaypumpkinfarm.com/images/pumpkin-display.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kingswaypumpkinfarm.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kingswaypumpkinfarm.com/">
   <link rel="icon" href="/images/logo.jpg">
+  <link rel="preload" as="image" href="/images/pumpkin-display.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap"></noscript>
   <style>
     :root {
       --orange: #E8791D;
@@ -33,7 +38,7 @@
     }
     h1, h2, h3 { font-family: 'Lilita One', 'Nunito', sans-serif; font-weight: 400; line-height: 1.1; margin: 0; }
     a { color: var(--orange-dark); }
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; height: auto; display: block; }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 
     /* Header */
@@ -48,7 +53,7 @@
     @media (max-width: 720px) { .nav ul { display: none; } }
 
     /* Announcement bar */
-    .bar { background: var(--orange); color: #fff; text-align: center; padding: 10px 16px; font-weight: 800; letter-spacing: .3px; }
+    .bar { background: var(--orange); color: var(--brown); text-align: center; padding: 10px 16px; font-weight: 800; letter-spacing: .3px; }
 
     /* Hero */
     .hero { position: relative; overflow: hidden; background: var(--brown-soft); color: var(--cream); }
@@ -63,10 +68,10 @@
     .hero h1 em { font-style: normal; color: var(--orange); }
     .hero p.lead { font-size: 1.25rem; max-width: 36ch; margin: 18px 0 28px; }
     .hero .logo { justify-self: center; width: min(100%, 360px); border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
-    .btn { display: inline-block; background: var(--orange); color: #fff; text-decoration: none; font-weight: 800;
-           padding: 14px 24px; border-radius: 999px; box-shadow: 0 6px 0 var(--orange-dark); transition: transform .08s; }
+    .btn { display: inline-block; background: var(--orange); color: var(--brown); text-decoration: none; font: inherit; font-weight: 800;
+           border: 0; cursor: pointer; padding: 14px 24px; border-radius: 999px; box-shadow: 0 6px 0 var(--orange-dark); transition: transform .08s; }
     .btn:hover { transform: translateY(-2px); }
-    .btn.ghost { background: transparent; box-shadow: inset 0 0 0 2px var(--cream); margin-left: 10px; }
+    .btn.ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 2px var(--cream); margin-left: 10px; }
     @media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; text-align: center; padding: 48px 20px; } .hero p.lead { margin-inline: auto; } .btn.ghost { margin: 10px 0 0; } }
 
     /* Sections */
@@ -98,7 +103,12 @@
     .visit dt { color: var(--orange); font-weight: 800; }
     .visit dd { margin: 0; }
     .visit a { color: var(--cream); }
-    .map { border: 0; width: 100%; height: 340px; border-radius: 14px; background: #ddd; }
+    .map { position: relative; width: 100%; height: 340px; border-radius: 14px; overflow: hidden; background: var(--brown-soft);
+           display: grid; place-items: center; text-align: center; padding: 20px; }
+    .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .map p { margin: 0 0 14px; color: var(--cream-dark); }
+    .map .btn { box-shadow: 0 4px 0 var(--orange-dark); }
+    .map .alt { display: block; margin-top: 12px; font-size: .95rem; }
     @media (max-width: 760px) { .visit-grid { grid-template-columns: 1fr; } }
 
     .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
@@ -113,7 +123,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top"><img src="/images/logo.jpg" alt="Kingsway Pumpkin Farm logo"><span>Kingsway Pumpkin Farm</span></a>
+    <a class="brand" href="#top"><img src="/images/logo.jpg" width="52" height="52" alt="Kingsway Pumpkin Farm logo"><span>Kingsway Pumpkin Farm</span></a>
     <ul>
       <li><a class="link" href="#attractions">Attractions</a></li>
       <li><a class="link" href="#about">About</a></li>
@@ -126,6 +136,7 @@
 
 <div class="bar">🎃 2026 season opens Saturday, September 12 — see you at the farm!</div>
 
+<main>
 <section class="hero" id="top">
   <div class="wrap">
     <div>
@@ -135,7 +146,7 @@
       <a class="btn" href="#visit">Plan your visit</a>
       <a class="btn ghost" href="https://www.facebook.com/profile.php?id=100064701789165" target="_blank" rel="noopener">Follow on Facebook</a>
     </div>
-    <img class="logo" src="/images/logo.jpg" alt="Kingsway Pumpkin Farm — Since 1990">
+    <img class="logo" src="/images/logo.jpg" width="345" height="300" fetchpriority="high" alt="Kingsway Pumpkin Farm — Since 1990">
   </div>
 </section>
 
@@ -163,7 +174,7 @@
         <li>Family owned and operated in Hartville since 1990</li>
       </ul>
     </div>
-    <img src="/images/pumpkin-display.jpg" alt="Pumpkins, hay bales and a scarecrow at the farm">
+    <img src="/images/pumpkin-display.jpg" width="414" height="414" loading="lazy" decoding="async" alt="Pumpkins, hay bales and a scarecrow at the farm">
   </div>
 </section>
 
@@ -192,8 +203,13 @@
         <dt>Email</dt><dd><a href="mailto:kingswaypumpkin@gmail.com">kingswaypumpkin@gmail.com</a></dd>
         <dt>Updates</dt><dd><a href="https://www.facebook.com/profile.php?id=100064701789165" target="_blank" rel="noopener">Kingsway Pumpkin Farm on Facebook</a></dd>
       </dl>
-      <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Kingsway Pumpkin Farm"
-        src="https://www.google.com/maps?q=1555+Andrews+Street+NE,+Hartville,+OH+44632&output=embed"></iframe>
+      <div class="map" id="map">
+        <div>
+          <p>1555 Andrews Street NE, Hartville, OH 44632</p>
+          <button class="btn" type="button" id="showmap">Show map</button>
+          <a class="alt" href="https://maps.google.com/?q=1555+Andrews+Street+NE,+Hartville,+OH+44632" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -203,13 +219,13 @@
     <h2>Around the farm</h2>
     <p class="sub">A few favorites from recent seasons. See many more on Facebook.</p>
     <div class="gallery">
-      <img src="/images/pumpkin-display.jpg" alt="Pumpkins, hay bales and a scarecrow at the farm entrance">
-      <img src="/images/opening-2026.jpg" alt="Opening September 12 for 2026">
-      <img src="/images/season-pass.jpg" alt="Kingsway season pass, tumbler and Shape Search game cards">
-      <img src="/images/farm-dog.jpg" alt="The farm dog resting in fall leaves">
+      <img src="/images/pumpkin-display.jpg" width="414" height="414" loading="lazy" decoding="async" alt="Pumpkins, hay bales and a scarecrow at the farm entrance">
+      <img src="/images/season-pass.jpg" width="414" height="414" loading="lazy" decoding="async" alt="Kingsway general admission pass, tumbler and Shape Search maze game cards">
+      <img src="/images/farm-dog.jpg" width="414" height="414" loading="lazy" decoding="async" alt="The farm dog resting in fall leaves">
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
@@ -217,6 +233,15 @@
     <div><a href="tel:+13308776241">(330) 877-6241</a> · <a href="mailto:kingswaypumpkin@gmail.com">kingswaypumpkin@gmail.com</a></div>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('showmap').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.title = 'Map to Kingsway Pumpkin Farm';
+    f.referrerPolicy = 'no-referrer-when-downgrade';
+    f.src = 'https://www.google.com/maps?q=1555+Andrews+Street+NE,+Hartville,+OH+44632&output=embed';
+    var m = document.getElementById('map'); m.innerHTML = ''; m.appendChild(f);
+  });
+</script>
 </body>
 </html>
