@@ -20,13 +20,17 @@
 
 1. **Facebook is the ONLY approved source** for images and facts: https://www.facebook.com/profile.php?id=100064701789165. The old site on SiteGround was **hacked** — do not fetch kingswaypumpkinfarm.com history, Wayback, or anything derived from the old host.
 2. **No AI-generated images.** Jim's earlier concept (landingsite.dev) used them and was rejected. Its *copy* was acceptable for ideas only.
-3. **No ticketing / pricing section.** Dropped on purpose.
+3. ~~No ticketing / pricing section.~~ **Superseded 2026-09-09:** Kevin King (owner) supplied hours and prices by email on Sept 8, 2026. See `docs/TASKS-2026-09-09-owner-copy-changes.md`.
 4. Never commit to `main`; branch + PR.
 
 ## What is verified vs. unverified
 
 **Verified from Facebook (safe):**
 - Name, "Since 1990", logo
+- All site images are byte-identical to files served by the Facebook page (MD5-matched 2026-09-03); the logo is a crop of the Facebook banner. None are AI-generated.
+- A maze exists: the "Shape Search Game" cards in the pass photo read "search the maze for 5 shape stations"
+- Admission passes exist: the pass in the photo is a **one general admission** pass, expires Oct 31, 2026 (so the season likely runs through October)
+- Aug 23, 2026 post: "Our first day will be Sept12th" and "we are having issues with our website, so please check fb"
 - Tagline: "family friendly experience free from the dark side of Halloween"
 - Address: 1555 Andrews Street NE, Hartville, OH 44632
 - Phone: (330) 877-6241
@@ -35,7 +39,7 @@
 - ~18K Facebook followers
 
 **From Jim's concept copy — NOT verified with the farm (fact-check these):**
-- Corn maze, hayrides / hay wagon
+- Hayrides / hay wagon (the maze itself is confirmed, "corn" is not)
 - Petting zoo & play area
 - "Free parking, right at the gate"
 - Farm stand snacks / seasonal treats
@@ -44,7 +48,7 @@
 - "Genuine working farm with real harvest traditions"
 
 **Inferred by Claude (check):**
-- "Season passes" card in the About section — based on a Facebook photo of a general-admission pass; wording is vague on purpose
+- The pass in the gallery photo is a general-admission pass, not a season pass (alt text fixed 2026-09-03)
 - "More than 35 years" (1990 → 2026)
 - "Family owned and operated" — plausible, not stated on Facebook
 
@@ -69,7 +73,6 @@
 |---|---|---|
 | `logo.jpg` | cropped from FB banner | 345×300, wood-plank background baked in; ideally get a transparent PNG from Jim |
 | `pumpkin-display.jpg` | FB post photo | 414×414 — used as hero background AND about image AND gallery; low-res, ask for original |
-| `opening-2026.jpg` | FB post | 414×414, text is cropped ("ening Sept 12th for 20") — replace or drop |
 | `season-pass.jpg` | FB post | 414×414, fine for gallery but implies passes exist — confirm |
 | `farm-dog.jpg` | FB post | 414×414, cute, confirm it's the farm's dog |
 
@@ -87,11 +90,12 @@
 - [ ] Alt text on every image (present, review wording)
 
 ### Technical
-- [ ] Mobile pass: nav collapses to nothing under 720px (links hidden, no hamburger) — decide if a mobile menu is needed for a one-pager or if anchor links are enough
-- [ ] Google Maps iframe: works, but consider a static link if it slows the page
-- [ ] Lighthouse run (perf / a11y / SEO)
-- [ ] Contrast check on cream-on-brown text
-- [ ] Google Fonts load (Lilita One + Nunito) — fine, or self-host
+- [x] Mobile pass done 2026-09-03: full-page render checked at 375px, no overflow. Nav links still hidden under 720px (no hamburger) — anchor CTAs cover it for a one-pager; revisit only if more sections are added
+- [x] Google Maps iframe replaced with a click-to-load "Show map" button + "Open in Google Maps" link (saved ~400 KB of Maps JS on first load)
+- [x] Lighthouse mobile (simulated slow 4G): before 76 perf / 91 a11y; after fixes 100 perf / 94+ a11y locally. Re-run against production after merge
+- [x] Contrast: white-on-orange (2.92:1) failed AA on the announcement bar and buttons; now brown-on-orange (4.87:1)
+- [x] Google Fonts now load non-blocking (media=print swap); `opening-2026.jpg` removed from the gallery (cropped text); hero image preloaded; images sized + lazy
+- [ ] Apex DNS: as of 2026-09-03 evening, some resolvers still cached the old SiteGround A record (35.209.89.159) showing an "Under Maintenance" page. Registry delegation and Vercel NS are correct; this clears on TTL expiry. Re-check with `dig @8.8.8.8 kingswaypumpkinfarm.com A`
 
 ### Housekeeping
 - [ ] Merge/close PR #1

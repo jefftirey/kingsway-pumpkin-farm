@@ -9,7 +9,14 @@ Single-page static site for Kingsway Pumpkin Farm, Hartville OH. Hosted on Verce
 ## Editing
 Edit `public/index.html` and push. Vercel deploys `main` to production automatically.
 
-## Content source
-All facts (address, phone, email, opening date, tagline) come from
-https://www.facebook.com/profile.php?id=100064701789165. Hours and admission are
-intentionally not listed until the farm confirms them.
+## Sources
+Every factual claim on the page must trace to one of these two sources. Nothing else.
+
+1. **Kevin King (owner) emails**, by date. Sept 8, 2026: hours, admission prices, attraction list,
+   barrel train, pumpkin pricing, card fee, wagon ride schedule.
+2. **The farm's Facebook page**: https://www.facebook.com/profile.php?id=100064701789165.
+   Name, "Since 1990", address, phone, email, opening day, tagline, photos.
+
+Jim's earlier concept copy is not a source. Anything unsourced was removed on 2026-09-09
+(see `docs/TASKS-2026-09-09-owner-copy-changes.md`). The pre-strip site is preserved on
+branch `legacy/2026-09-09-pre-strip` and tag `legacy-2026-09-09`.
