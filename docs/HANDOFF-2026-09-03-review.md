@@ -20,7 +20,7 @@
 
 1. **Facebook is the ONLY approved source** for images and facts: https://www.facebook.com/profile.php?id=100064701789165. The old site on SiteGround was **hacked** — do not fetch kingswaypumpkinfarm.com history, Wayback, or anything derived from the old host.
 2. **No AI-generated images.** Jim's earlier concept (landingsite.dev) used them and was rejected. Its *copy* was acceptable for ideas only.
-3. **No ticketing / pricing section.** Dropped on purpose.
+3. ~~No ticketing / pricing section.~~ **Superseded 2026-09-09:** Kevin King (owner) supplied hours and prices by email on Sept 8, 2026. See `docs/TASKS-2026-09-09-owner-copy-changes.md`.
 4. Never commit to `main`; branch + PR.
 
 ## What is verified vs. unverified

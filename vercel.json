@@ -29,7 +29,7 @@
     },
     {
       "source": "/hours-pricing",
-      "destination": "/#visit",
+      "destination": "/#admission",
       "permanent": true
     },
     {

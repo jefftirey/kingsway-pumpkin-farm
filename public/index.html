@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kingsway Pumpkin Farm · Hartville, Ohio · Since 1990</title>
-  <meta name="description" content="Kingsway Pumpkin Farm in Hartville, Ohio. Pumpkin patch, hayrides, corn maze and family-friendly fall fun since 1990. 2026 season opens September 12.">
+  <meta name="description" content="Kingsway Pumpkin Farm in Hartville, Ohio. Pumpkins, wagon rides, corn maze, farm animals and family-friendly fall fun since 1990. Open Mon–Sat 10–7, Sun 1–6. 2026 season opens September 12.">
   <meta property="og:title" content="Kingsway Pumpkin Farm · Hartville, Ohio">
-  <meta property="og:description" content="Memories grow on the vine. Family-friendly fall fun since 1990. 2026 season opens September 12.">
+  <meta property="og:description" content="Memories grow on the vine. Family-friendly fall fun in Hartville, Ohio since 1990. Open Mon–Sat 10–7, Sun 1–6. 2026 season opens September 12.">
   <meta property="og:image" content="https://kingswaypumpkinfarm.com/images/pumpkin-display.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kingswaypumpkinfarm.com/">
@@ -87,13 +87,16 @@
 
     .about { background: var(--cream-dark); }
     .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
-    .about ul { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
-    .about li { padding-left: 30px; position: relative; font-weight: 600; }
-    .about li::before { content: "🎃"; position: absolute; left: 0; top: 0; }
     .about img { border-radius: 16px; box-shadow: 0 16px 36px rgba(63,36,20,.2); aspect-ratio: 1; object-fit: cover; width: 100%; }
     @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; } }
 
-    .plan .cards .card { border-top-color: var(--green); }
+    .admission .cards .card { border-top-color: var(--green); }
+    .admission .price { font-family: 'Lilita One', sans-serif; font-size: 2rem; color: var(--green); line-height: 1; margin-bottom: 6px; }
+    .hours-box { background: var(--brown); color: var(--cream); border-radius: 16px; padding: 22px 26px; margin-bottom: 24px; display: grid; gap: 6px; font-size: 1.1rem; }
+    .hours-box strong { color: var(--orange); font-family: 'Lilita One', sans-serif; font-weight: 400; font-size: 1.4rem; }
+    .fine { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 10px; color: #4a3a2e; }
+    .fine li { padding-left: 28px; position: relative; }
+    .fine li::before { content: "🎃"; position: absolute; left: 0; top: 2px; }
 
     .visit { background: var(--brown); color: var(--cream); }
     .visit h2 { color: var(--cream); }
@@ -118,6 +121,31 @@
     footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
     footer a { color: var(--cream); }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kingsway Pumpkin Farm",
+    "url": "https://kingswaypumpkinfarm.com/",
+    "image": "https://kingswaypumpkinfarm.com/images/pumpkin-display.jpg",
+    "telephone": "+1-330-877-6241",
+    "email": "kingswaypumpkin@gmail.com",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1555 Andrews Street NE",
+      "addressLocality": "Hartville",
+      "addressRegion": "OH",
+      "postalCode": "44632",
+      "addressCountry": "US"
+    },
+    "sameAs": ["https://www.facebook.com/profile.php?id=100064701789165"],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "13:00", "closes": "18:00" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -126,8 +154,8 @@
     <a class="brand" href="#top"><img src="/images/logo.jpg" width="52" height="52" alt="Kingsway Pumpkin Farm logo"><span>Kingsway Pumpkin Farm</span></a>
     <ul>
       <li><a class="link" href="#attractions">Attractions</a></li>
+      <li><a class="link" href="#admission">Hours &amp; Admission</a></li>
       <li><a class="link" href="#about">About</a></li>
-      <li><a class="link" href="#plan">Plan Your Day</a></li>
       <li><a class="link" href="#visit">Visit &amp; Contact</a></li>
       <li><a class="link" href="https://www.facebook.com/profile.php?id=100064701789165" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
@@ -142,7 +170,7 @@
     <div>
       <span class="kicker">Hartville, Ohio · Since 1990</span>
       <h1>Memories grow <em>on the vine.</em></h1>
-      <p class="lead">Wander the pumpkin patch, get lost in the corn maze, ride the hay wagon and make this fall unforgettable. Family-friendly fun, free from the dark side of Halloween.</p>
+      <p class="lead">Pick a pumpkin, find your way through the corn maze, hop on the wagon ride. Family-friendly fun, free from the dark side of Halloween.</p>
       <a class="btn" href="#visit">Plan your visit</a>
       <a class="btn ghost" href="https://www.facebook.com/profile.php?id=100064701789165" target="_blank" rel="noopener">Follow on Facebook</a>
     </div>
@@ -153,11 +181,14 @@
 <section id="attractions">
   <div class="wrap">
     <h2>A whole farm of fall fun</h2>
-    <p class="sub">Everything at Kingsway is made for kids, parents and grandparents alike. Wholesome daytime fun with plenty of room to roam.</p>
+    <p class="sub">Everything at Kingsway is made for kids, parents and grandparents alike.</p>
     <div class="cards">
-      <div class="card"><div class="ico">🎃</div><h3>The Pumpkin Patch</h3><p>Hundreds of pumpkins in every size and shape, waiting to come home with you.</p></div>
-      <div class="card"><div class="ico">🚜</div><h3>Hayrides &amp; Corn Maze</h3><p>Jump on the wagon for a breezy farm tour, then test your way through the maze.</p></div>
-      <div class="card"><div class="ico">🐐</div><h3>Petting Zoo &amp; Play Area</h3><p>Say hello to the farm animals and let the little ones burn off some energy.</p></div>
+      <div class="card"><div class="ico">🎃</div><h3>Pumpkins</h3><p>Priced by the pound, about 35 cents depending on variety. Not included in admission.</p></div>
+      <div class="card"><div class="ico">🚜</div><h3>Wagon Ride</h3><p>Weekends in September, daily from October 1. Weather permitting, check Facebook.</p></div>
+      <div class="card"><div class="ico">🌽</div><h3>Corn Maze</h3><p>Find your way through this year's maze.</p></div>
+      <div class="card"><div class="ico">🐐</div><h3>Farm Animals</h3><p>Say hello to the animals.</p></div>
+      <div class="card"><div class="ico">🛞</div><h3>Pedal Karts, Straw Tunnel &amp; Corn Box</h3><p>All included with admission.</p></div>
+      <div class="card"><div class="ico">🚂</div><h3>Kids Barrel Train</h3><p>Riders 48" and under. $2 per ride.</p></div>
     </div>
   </div>
 </section>
@@ -166,38 +197,42 @@
   <div class="wrap about-grid">
     <div>
       <h2>Growing family memories</h2>
-      <p class="sub" style="margin-bottom:0">A family farm, fired up for fall. Kingsway Pumpkin Farm started with a single field and a simple promise: give families a place to slow down, pick a pumpkin, and make memories together. More than 35 years later, that's still what we do.</p>
-      <ul>
-        <li>Families, friends and school groups welcome</li>
-        <li>A genuine working farm with real harvest traditions</li>
-        <li>Safe, spacious grounds for little ones to roam</li>
-        <li>Family owned and operated in Hartville since 1990</li>
-      </ul>
+      <p class="sub" style="margin-bottom:0">Kingsway Pumpkin Farm has been growing pumpkins and fall memories in Hartville, Ohio since 1990. A family-friendly experience, free from the dark side of Halloween.</p>
     </div>
     <img src="/images/pumpkin-display.jpg" width="414" height="414" loading="lazy" decoding="async" alt="Pumpkins, hay bales and a scarecrow at the farm">
   </div>
 </section>
 
-<section class="plan" id="plan">
+<section class="admission" id="admission">
   <div class="wrap">
-    <h2>Make the most of your day</h2>
-    <p class="sub">A few things to know before you head out to the farm.</p>
-    <div class="cards">
-      <div class="card"><div class="ico">🅿️</div><h3>Parking</h3><p>Free, right at the gate.</p></div>
-      <div class="card"><div class="ico">👟</div><h3>What to bring</h3><p>Comfortable shoes and a camera. It's a working farm, so dress for the weather.</p></div>
-      <div class="card"><div class="ico">🍎</div><h3>Food &amp; drink</h3><p>Farm stand snacks and seasonal treats available on site.</p></div>
-      <div class="card"><div class="ico">🏫</div><h3>Groups &amp; field trips</h3><p>School and group visits welcome. Call or email to arrange a date.</p></div>
+    <h2>Hours &amp; Admission</h2>
+    <p class="sub">Open seven days a week during the season.</p>
+    <div class="hours-box">
+      <div><strong>Monday – Saturday</strong> &nbsp;10:00 am – 7:00 pm</div>
+      <div><strong>Sunday</strong> &nbsp;1:00 – 6:00 pm</div>
+      <div>Last admission 30 minutes before close.</div>
     </div>
+    <div class="cards">
+      <div class="card"><div class="price">$12</div><h3>General Admission</h3><p>Per person. Ages 3 and under are free. Includes the wagon ride, farm animals, corn maze, straw tunnel, corn box, pedal karts and more.</p></div>
+      <div class="card"><div class="price">$10</div><h3>Monday – Thursday</h3><p>Per person. Weekday discount on general admission.</p></div>
+      <div class="card"><div class="price">$2</div><h3>Kids Barrel Train</h3><p>Per ride, for riders 48" and under. Not included in admission.</p></div>
+    </div>
+    <ul class="fine">
+      <li>Pumpkins are sold separately, by the pound. About 35 cents per pound depending on variety.</li>
+      <li>Wagon rides run Saturdays and Sundays in September and daily starting October 1, weather permitting. Check Facebook for updates.</li>
+      <li>Cash gladly accepted with no fee. A 3% fee applies to all credit card transactions.</li>
+    </ul>
   </div>
 </section>
 
 <section class="visit" id="visit">
   <div class="wrap">
     <h2>Plan your visit</h2>
-    <p class="sub">Hours, admission and daily updates are posted on our Facebook page. Questions, group bookings or just saying hello? Call, email, or message us on Facebook.</p>
+    <p class="sub">Daily updates and weather calls are posted on our Facebook page. Questions or just saying hello? Call, email, or message us on Facebook.</p>
     <div class="visit-grid">
       <dl>
         <dt>Opening day</dt><dd>Saturday, September 12, 2026</dd>
+        <dt>Hours</dt><dd>Mon – Sat 10 am – 7 pm<br>Sun 1 – 6 pm<br>Last admission 30 minutes before close</dd>
         <dt>Address</dt><dd><a href="https://maps.google.com/?q=1555+Andrews+Street+NE,+Hartville,+OH+44632" target="_blank" rel="noopener">1555 Andrews Street NE<br>Hartville, OH 44632</a></dd>
         <dt>Phone</dt><dd><a href="tel:+13308776241">(330) 877-6241</a></dd>
         <dt>Email</dt><dd><a href="mailto:kingswaypumpkin@gmail.com">kingswaypumpkin@gmail.com</a></dd>
@@ -229,7 +264,7 @@
 
 <footer>
   <div class="wrap">
-    <div>© <span id="yr">2026</span> Kingsway Pumpkin Farm · A family farm growing pumpkins, memories and a whole lot of fall fun.</div>
+    <div>© <span id="yr">2026</span> Kingsway Pumpkin Farm · Hartville, Ohio · Since 1990</div>
     <div><a href="tel:+13308776241">(330) 877-6241</a> · <a href="mailto:kingswaypumpkin@gmail.com">kingswaypumpkin@gmail.com</a></div>
   </div>
 </footer>
