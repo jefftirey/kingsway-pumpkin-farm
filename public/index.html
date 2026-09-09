@@ -85,6 +85,14 @@
     .card h3 { font-size: 1.35rem; color: var(--brown); margin-bottom: 8px; }
     .card p { margin: 0; color: #4a3a2e; }
 
+    .maze { background: var(--brown-soft); color: var(--cream); }
+    .maze h2 { color: var(--cream); }
+    .maze h2 em { font-style: normal; color: var(--orange); }
+    .maze .sub { color: var(--cream-dark); }
+    .maze-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
+    .maze img { border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+    @media (max-width: 760px) { .maze-grid { grid-template-columns: 1fr; } }
+
     .about { background: var(--cream-dark); }
     .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
     .about img { border-radius: 16px; box-shadow: 0 16px 36px rgba(63,36,20,.2); aspect-ratio: 1; object-fit: cover; width: 100%; }
@@ -154,8 +162,8 @@
     <a class="brand" href="#top"><img src="/images/logo.jpg" width="52" height="52" alt="Kingsway Pumpkin Farm logo"><span>Kingsway Pumpkin Farm</span></a>
     <ul>
       <li><a class="link" href="#attractions">Attractions</a></li>
+      <li><a class="link" href="/corn-maze">Corn Maze</a></li>
       <li><a class="link" href="#admission">Hours &amp; Admission</a></li>
-      <li><a class="link" href="#about">About</a></li>
       <li><a class="link" href="#visit">Visit &amp; Contact</a></li>
       <li><a class="link" href="https://www.facebook.com/profile.php?id=100064701789165" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
@@ -185,11 +193,23 @@
     <div class="cards">
       <div class="card"><div class="ico">🎃</div><h3>Pumpkins</h3><p>Priced by the pound, about 35 cents depending on variety. Not included in admission.</p></div>
       <div class="card"><div class="ico">🚜</div><h3>Wagon Ride</h3><p>Weekends in September, daily from October 1. Weather permitting, check Facebook.</p></div>
-      <div class="card"><div class="ico">🌽</div><h3>Corn Maze</h3><p>Find your way through this year's maze.</p></div>
+      <div class="card"><div class="ico">🌽</div><h3>Corn Maze</h3><p>Mount Maize-more: Mount Rushmore cut into the corn for America's 250th. <a href="/corn-maze">See the maze</a>.</p></div>
       <div class="card"><div class="ico">🐐</div><h3>Farm Animals</h3><p>Say hello to the animals.</p></div>
       <div class="card"><div class="ico">🛞</div><h3>Pedal Karts, Straw Tunnel &amp; Corn Box</h3><p>All included with admission.</p></div>
       <div class="card"><div class="ico">🚂</div><h3>Kids Barrel Train</h3><p>Riders 48" and under. $2 per ride.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="maze" id="maze">
+  <div class="wrap maze-grid">
+    <div>
+      <span class="kicker" style="display:inline-block;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-weight:800;font-size:.9rem;letter-spacing:.5px;text-transform:uppercase;margin-bottom:18px">2026 Corn Maze</span>
+      <h2>Mount <em>Maize</em>-more</h2>
+      <p class="sub">Mount Rushmore, cut into the corn for America's 250th birthday. Included with general admission.</p>
+      <a class="btn" href="/corn-maze">See the maze</a>
+    </div>
+    <a href="/corn-maze"><img src="/images/corn-maze-2026.jpg" width="1063" height="729" loading="lazy" decoding="async" alt="Aerial view of the 2026 Kingsway corn maze: Mount Rushmore and the words 250 Years cut into the corn"></a>
   </div>
 </section>
 
